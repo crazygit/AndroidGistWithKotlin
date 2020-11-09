@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AndroidGistWithKotlin</string>
+    <string name="entry_point_name">EntryPoint Name</string>
+</resources>
