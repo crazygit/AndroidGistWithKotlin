@@ -7,14 +7,14 @@
     tools:context=".ui.fragment.FragmentDemoActivity">
 
     <fragment
-        android:id="@+id/topFragment"
-        android:name="com.github.crazygit.demo.androidgistwithkotlin.ui.fragment.TopFragment"
+        android:id="@+id/antherTopFragment"
+        android:name="com.github.crazygit.demo.androidgistwithkotlin.ui.fragment.AnotherTopFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <fragment
-        android:id="@+id/bottomFragment"
+    <FrameLayout
+        android:id="@+id/bottomLayout"
         android:name="com.github.crazygit.demo.androidgistwithkotlin.ui.fragment.BottomFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"

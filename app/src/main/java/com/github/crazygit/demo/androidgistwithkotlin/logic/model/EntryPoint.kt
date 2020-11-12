@@ -19,7 +19,9 @@ class EntryPoint(
     fun startSubActivity(context: Context) =
         subActivity?.let {
             context.startActivity(
-                Intent(context, it)
+                Intent(context, it).apply {
+                    putExtra("title", title)
+                }
             )
         }
 }

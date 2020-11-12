@@ -2,4 +2,13 @@
     <string name="app_name">AndroidGistWithKotlin</string>
     <string name="entry_point_title">EntryPoint Title</string>
     <string name="entry_point_description">EntryPoint Description</string>
+    <string name="this_is_top_fragment">This is top fragment</string>
+    <string name="this_is_bottom_fragment">This is bottom fragment</string>
+    <string name="change_bottom_fragment">Change bottom fragment</string>
+    <string name="this_is_another_bottom_fragment">This is another fragment</string>
+    <string name="this_is_another_top_fragment">This is another top fragment</string>
+    <string name="this_text_in_main_activity">This is text in Activity</string>
+    <string name="talk_to_bottom_fragment">Talk to Bottom Fragment</string>
+    <string name="talk_to_top_fragment">Talk to Top Fragment</string>
+    <string name="talk_to_activity">Talk to Activity</string>
 </resources>

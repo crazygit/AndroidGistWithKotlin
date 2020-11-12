@@ -5,12 +5,15 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:fullBackupContent="false"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidGistWithKotlin">
-        <activity android:name=".ui.RecycleViewDemo"></activity>
-        <activity android:name=".ui.FragmentDemo" />
+        <activity android:name=".ui.fragment.FragmentCommunicationActivity" />
+        <activity android:name=".ui.fragment.DynamicLoadFragmentDemoActivity" />
+        <activity android:name=".ui.RecycleViewDemoActivity" />
+        <activity android:name=".ui.fragment.FragmentDemoActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
