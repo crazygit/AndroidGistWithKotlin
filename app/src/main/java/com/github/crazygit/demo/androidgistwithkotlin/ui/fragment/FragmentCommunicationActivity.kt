@@ -1,11 +1,11 @@
 package com.github.crazygit.demo.androidgistwithkotlin.ui.fragment
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import com.github.crazygit.demo.androidgistwithkotlin.BaseActivity
 import com.github.crazygit.demo.androidgistwithkotlin.R
 import com.github.crazygit.demo.androidgistwithkotlin.databinding.ActivityFragmentCommunicationBinding
 
-class FragmentCommunicationActivity : AppCompatActivity() {
+class FragmentCommunicationActivity : BaseActivity() {
     private lateinit var binding: ActivityFragmentCommunicationBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

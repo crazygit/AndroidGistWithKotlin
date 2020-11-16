@@ -2,12 +2,12 @@ package com.github.crazygit.demo.androidgistwithkotlin.ui.fragment
 
 import android.os.Bundle
 import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.github.crazygit.demo.androidgistwithkotlin.BaseActivity
 import com.github.crazygit.demo.androidgistwithkotlin.R
 import com.github.crazygit.demo.androidgistwithkotlin.databinding.ActivityDynamicLoadFragmentDemoBinding
 
-class DynamicLoadFragmentDemoActivity : AppCompatActivity() {
+class DynamicLoadFragmentDemoActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityDynamicLoadFragmentDemoBinding.inflate(layoutInflater)

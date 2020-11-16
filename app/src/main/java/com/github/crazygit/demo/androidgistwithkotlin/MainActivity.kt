@@ -3,9 +3,13 @@ package com.github.crazygit.demo.androidgistwithkotlin
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.github.crazygit.demo.androidgistwithkotlin.coroutines.CoroutinesDemoActivity
 import com.github.crazygit.demo.androidgistwithkotlin.databinding.ActivityMainBinding
 import com.github.crazygit.demo.androidgistwithkotlin.logic.model.EntryPoint
-import com.github.crazygit.demo.androidgistwithkotlin.ui.RecycleViewDemoActivity
+import com.github.crazygit.demo.androidgistwithkotlin.network.NetworkDemoActivity
+import com.github.crazygit.demo.androidgistwithkotlin.ui.architecture.lifecycles.LifecyclesDemoActivity
+import com.github.crazygit.demo.androidgistwithkotlin.ui.architecture.livedata.LiveDataDemoActivity
+import com.github.crazygit.demo.androidgistwithkotlin.ui.architecture.viewmodel.ViewModelDemoActivity
 import com.github.crazygit.demo.androidgistwithkotlin.ui.fragment.DynamicLoadFragmentDemoActivity
 import com.github.crazygit.demo.androidgistwithkotlin.ui.fragment.FragmentCommunicationActivity
 import com.github.crazygit.demo.androidgistwithkotlin.ui.fragment.FragmentDemoActivity
@@ -45,15 +49,65 @@ class MainActivity : BaseActivity(), EntryPointClickListener {
     private fun getMainEntryPoint(): EntryPoint {
         return EntryPoint(
             "Home", children = listOf(
-                EntryPoint("RecycleView", subActivity = RecycleViewDemoActivity::class.java),
                 EntryPoint(
-                    "Fragment", children =
-                    listOf(
-                        EntryPoint("Fragment简单使用", subActivity = FragmentDemoActivity::class.java),
+                    "Architecture Components",
+                    description = """
+                        Android架构组件
+                        * App Startup
+                        * DataStore
+                        * ViewBinding
+                        * DataBinding
+                        * Live Data
+                        * ViewModel
+                        * WorkManager
+                        * Saving States
+                        * Paging Library
+                        ......
+
+                        更多内容可以参考:
+                        https://developer.android.com/topic/libraries/architecture
+
+                        使用示例:
+                        https://github.com/android/architecture-components-samples
+                    """.trimIndent(),
+                    children = listOf(
                         EntryPoint(
-                            "Fragment动态加载",
-                            subActivity = DynamicLoadFragmentDemoActivity::class.java,
+                            "ViewModel", subActivity = ViewModelDemoActivity::class.java,
                             description = """
+                            如果要向ViewModel传递参数，需要创建一个Factory类并继承ViewModelProvider.NewInstanceFactory来实现
+                        """.trimIndent()
+                        ),
+                        EntryPoint(
+                            "Lifecycles", subActivity = LifecyclesDemoActivity::class.java,
+                            description = """
+                            1. 创建一个Observer类实现LifecycleObserver接口
+                            2. 在Observer类里面定义需要感知生命周期的方法，并给这些方法添加上表示生命周期的@OnLifecycleEvent的注解
+                            3. 通过LifecycleOwner对象的addObserver()方法，添加定义好的Observer类
+                        """.trimIndent()
+                        ),
+                        EntryPoint(
+                            "LiveData", subActivity = LiveDataDemoActivity::class.java,
+                            description = """
+                            LiveData的基本函数，以及map和switchMap方法的使用场景
+                        """.trimIndent()
+                        )
+
+                    )
+                ),
+                EntryPoint(
+                    "UI", description = "User Interface",
+                    children = listOf(
+                        EntryPoint(
+                            "Fragment", children =
+                            listOf(
+                                EntryPoint(
+                                    "Fragment简单使用",
+                                    subActivity = FragmentDemoActivity::class.java
+                                ),
+                                EntryPoint(
+                                    "Fragment动态加载",
+                                    subActivity = DynamicLoadFragmentDemoActivity::class.java,
+                                    description = """
                             动态添加Fragment可以分为5步
 
                             1. 创建待添加的Fragment实例
@@ -64,11 +118,11 @@ class MainActivity : BaseActivity(), EntryPointClickListener {
 
                             如果需要将事务添加到返回栈中，可以使用addToBackStack()方法来实现
                             """.trimIndent()
-                        ),
-                        EntryPoint(
-                            "Fragment与Activity交互",
-                            subActivity = FragmentCommunicationActivity::class.java,
-                            description = """
+                                ),
+                                EntryPoint(
+                                    "Fragment与Activity交互",
+                                    subActivity = FragmentCommunicationActivity::class.java,
+                                    description = """
                                 Activity -> Fragment
 
                                 1. 获取FragmentManager， 在Activity中直接通过getSupportFragmentManager()方法获取
@@ -89,12 +143,32 @@ class MainActivity : BaseActivity(), EntryPointClickListener {
                                 4. 调用 Fragment B 里的方法
                             """.trimIndent()
 
-                        ),
-                        EntryPoint("Fragment的生命周期"),
+                                ),
+                                EntryPoint(
+                                    "Fragment的生命周期", description = """
+                            生命周期参考官方文档
+                            https://developer.android.com/guide/components/fragments
+                        """.trimIndent()
+                                ),
 
+                                ),
+                            description = "Fragment的简单用法，动态加载，生命周期，以及与Activity交互"
                         ),
-                    description = "Fragment的简单用法，动态加载，生命周期，以及与Activity交互"
+                    )
                 ),
+                EntryPoint(
+                    "Network", subActivity = NetworkDemoActivity::class.java,
+                    description = """
+                    HTTPURLConnection, OkHttp, Retrofit
+                    Parse Json Response with JSONObject, GSON
+                """.trimIndent()
+                ),
+                EntryPoint(
+                    "Coroutines", subActivity = CoroutinesDemoActivity::class.java,
+                    description = """
+                        协程相关使用
+                    """.trimIndent()
+                )
             )
         )
     }

@@ -24,11 +24,17 @@
             android:textAppearance="?attr/textAppearanceHeadline6"
             tools:text="@string/entry_point_title" />
 
+
+        <!--
+        android:autoLink="web" 让TextView中的链接可以被点击 ,可选值还有
+        none, email, phone. map, all
+         -->
         <TextView
             android:id="@+id/entryPointDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:autoLink="web"
             android:textAppearance="?attr/textAppearanceBody2"
             android:textColor="?android:attr/textColorSecondary"
             tools:text="@string/entry_point_description" />

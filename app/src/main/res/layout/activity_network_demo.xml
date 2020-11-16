@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".network.NetworkDemoActivity">
+
+    <Button
+        android:id="@+id/sendRequestWithHTTPURLConnectionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_request_with_http_url_connection" />
+
+    <Button
+        android:id="@+id/sendRequestWithHTTPURLConnectionAndCallbackBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_request_with_http_url_connection_and_callback" />
+
+    <Button
+        android:id="@+id/sendRequestWithOkHttpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_request_with_ok_http" />
+
+
+    <Button
+        android:id="@+id/sendRequestWithOkHttpAndCallBackBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_request_with_ok_http_and_callback" />
+
+    <Button
+        android:id="@+id/sendRequestWithRetrofit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_request_with_retrofit" />
+
+    <Button
+        android:id="@+id/sendRequestWithCoroutine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_request_with_coroutine" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/responseText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+</LinearLayout>

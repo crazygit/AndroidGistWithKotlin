@@ -2,6 +2,7 @@ package com.github.crazygit.demo.androidgistwithkotlin.logic.model
 
 import android.content.Context
 import android.content.Intent
+import android.widget.Toast
 
 class EntryPoint(
     val title: String,
@@ -23,5 +24,7 @@ class EntryPoint(
                     putExtra("title", title)
                 }
             )
+        } ?: run {
+            Toast.makeText(context, "Already hit the bottom level", Toast.LENGTH_SHORT).show()
         }
 }

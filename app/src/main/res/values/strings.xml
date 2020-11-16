@@ -11,4 +11,17 @@
     <string name="talk_to_bottom_fragment">Talk to Bottom Fragment</string>
     <string name="talk_to_top_fragment">Talk to Top Fragment</string>
     <string name="talk_to_activity">Talk to Activity</string>
+    <string name="plus_one">Plus One</string>
+    <string name="clear">Clear</string>
+    <string name="changeUserName">Change User Name</string>
+    <string name="changeUserId">Change User Id</string>
+    <string name="logcat_prompt">请通过Logcat查看感知生命周期变化的日志</string>
+    <string name="send_request_with_http_url_connection">Send Request With HTTPURLConnection</string>
+    <string name="send_request_with_http_url_connection_and_callback">Send Request With HTTPURLConnection and CallBack</string>
+    <string name="send_request_with_ok_http">Send Request With OkHttp</string>
+    <string name="send_request_with_ok_http_and_callback">Send Request With OkHttp and CallBack</string>
+    <string name="send_request_with_retrofit">Send Request With Retrofit</string>
+    <string name="send_request_with_coroutine">Send Request With Coroutine</string>
+    <string name="launch_from_globalscope">Launch from GlobalScope</string>
+    <string name="launch_from_mainscope">Launch from MainScope</string>
 </resources>
