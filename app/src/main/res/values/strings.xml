@@ -24,4 +24,5 @@
     <string name="send_request_with_coroutine">Send Request With Coroutine</string>
     <string name="launch_from_globalscope">Launch from GlobalScope</string>
     <string name="launch_from_mainscope">Launch from MainScope</string>
+    <string name="unit_test_get_string">This string is for unit test purpose</string>
 </resources>

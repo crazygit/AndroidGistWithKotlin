@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidGistWithKotlin">
-        <activity android:name=".coroutines.CoroutinesDemoActivity"></activity>
+        <activity android:name=".coroutines.CoroutinesDemoActivity" />
         <activity android:name=".network.NetworkDemoActivity" />
         <activity android:name=".ui.architecture.lifecycles.LifecyclesDemoActivity" />
         <activity android:name=".ui.architecture.viewmodel.ViewModelDemoActivity" />

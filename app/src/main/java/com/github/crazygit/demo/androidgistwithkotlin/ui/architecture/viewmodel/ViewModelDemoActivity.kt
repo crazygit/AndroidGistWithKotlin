@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import com.github.crazygit.demo.androidgistwithkotlin.BaseActivity
 import com.github.crazygit.demo.androidgistwithkotlin.databinding.ActivityViewModelDemoBinding

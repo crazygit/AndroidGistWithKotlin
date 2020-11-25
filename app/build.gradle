@@ -5,7 +5,7 @@ plugins {
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.1"
+    buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.github.crazygit.demo.androidgistwithkotlin"
@@ -34,6 +34,12 @@ android {
     // enable viewBinding
     buildFeatures {
         viewBinding true
+    }
+
+    // 添加框架依赖
+    // 编写对 Android 框架有依赖性的单元测试时需要使用
+    testOptions {
+        unitTests.includeAndroidResources = true
     }
 }
 
@@ -65,7 +71,21 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1"
 
+    // Required -- JUnit 4 framework
     testImplementation 'junit:junit:4.13.1'
+
+    // Optional -- Robolectric environment
+    testImplementation 'androidx.test:core-ktx:1.3.0'
+    testImplementation 'org.robolectric:robolectric:4.4'
+    testImplementation 'androidx.test.ext:junit-ktx:1.1.2'
+
+    // 使用truth断言库
+    testImplementation 'androidx.test.ext:truth:1.3.0'
+    testImplementation 'com.google.truth:truth:1.0'
+
+    // Optional -- Mockito framework
+    testImplementation 'org.mockito:mockito-core:3.3.3'
+
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
