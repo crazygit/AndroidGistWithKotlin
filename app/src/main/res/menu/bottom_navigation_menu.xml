@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/music"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_music_note_24"
+        android:title="@string/music" />
+    <item
+        android:id="@+id/video"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_videocam_24"
+        android:title="@string/video" />
+    <item
+        android:id="@+id/people"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_assignment_ind_24"
+        android:title="@string/people" />
+</menu>

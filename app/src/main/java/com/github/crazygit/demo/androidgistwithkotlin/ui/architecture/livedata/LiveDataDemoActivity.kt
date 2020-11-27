@@ -3,14 +3,14 @@ package com.github.crazygit.demo.androidgistwithkotlin.ui.architecture.livedata
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.github.crazygit.demo.androidgistwithkotlin.BaseActivity
-import com.github.crazygit.demo.androidgistwithkotlin.databinding.ActivityLiveDataDemoBinding
+import com.github.crazygit.demo.androidgistwithkotlin.databinding.ActivityLivedataDemoBinding
 
 class LiveDataDemoActivity : BaseActivity() {
     private val userViewModel: UserViewModel by viewModels()
     private val liveDataViewModel: LiveDataViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityLiveDataDemoBinding.inflate(layoutInflater)
+        val binding = ActivityLivedataDemoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.plusOneBtn.setOnClickListener {

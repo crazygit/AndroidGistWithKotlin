@@ -12,6 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidGistWithKotlin">
+        <activity android:name=".navigation.NavigationMainActivity" />
+        <activity android:name=".testdemo.UITestWithEspresso" />
         <activity android:name=".coroutines.CoroutinesDemoActivity" />
         <activity android:name=".network.NetworkDemoActivity" />
         <activity android:name=".ui.architecture.lifecycles.LifecyclesDemoActivity" />

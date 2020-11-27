@@ -4,48 +4,48 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.github.crazygit.demo.androidgistwithkotlin.databinding.EntrypointItemBinding
-import com.github.crazygit.demo.androidgistwithkotlin.logic.model.EntryPoint
+import com.github.crazygit.demo.androidgistwithkotlin.databinding.MenuItemBinding
+import com.github.crazygit.demo.androidgistwithkotlin.logic.model.Menu
 
-class MainAdapter(val entryPointClickListener: EntryPointClickListener) :
+class MainAdapter(val menuClickListener: MenuClickListener) :
     RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
-    private var currentEntryPoint: EntryPoint? = null
+    private var currentMenu: Menu? = null
 
-    inner class ViewHolder(private val itemBinding: EntrypointItemBinding) :
+    inner class ViewHolder(private val itemBinding: MenuItemBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
-        fun bind(entryPoint: EntryPoint) {
-            itemBinding.entryPointTitle.text = entryPoint.title
-            if (entryPoint.description != null) {
-                itemBinding.entryPointDescription.text = entryPoint.description
-                itemBinding.entryPointDescription.visibility = View.VISIBLE
+        fun bind(menu: Menu) {
+            itemBinding.menuTitle.text = menu.title
+            if (menu.description != null) {
+                itemBinding.menuDescription.text = menu.description
+                itemBinding.menuDescription.visibility = View.VISIBLE
             } else {
-                itemBinding.entryPointDescription.visibility = View.GONE
+                itemBinding.menuDescription.visibility = View.GONE
             }
             itemBinding.root.setOnClickListener {
-                entryPointClickListener.onEntryPointClick(entryPoint)
+                menuClickListener.onMenuClick(menu)
             }
         }
     }
 
-    fun setCurrentEntryPoint(entryPoint: EntryPoint?) {
-        currentEntryPoint = entryPoint
+    fun setCurrentMenu(menu: Menu?) {
+        currentMenu = menu
         notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemBinding: EntrypointItemBinding =
-            EntrypointItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val itemBinding: MenuItemBinding =
+            MenuItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(itemBinding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        currentEntryPoint?.children?.let {
+        currentMenu?.children?.let {
             holder.bind(it[position])
         }
     }
 
-    override fun getItemCount(): Int = currentEntryPoint?.children?.size ?: 0
+    override fun getItemCount(): Int = currentMenu?.children?.size ?: 0
 
 }
 

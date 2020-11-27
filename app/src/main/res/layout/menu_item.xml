@@ -18,11 +18,11 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/entryPointTitle"
+            android:id="@+id/menuTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?attr/textAppearanceHeadline6"
-            tools:text="@string/entry_point_title" />
+            tools:text="@string/menu_title" />
 
 
         <!--
@@ -30,14 +30,14 @@
         none, email, phone. map, all
          -->
         <TextView
-            android:id="@+id/entryPointDescription"
+            android:id="@+id/menuDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:autoLink="web"
             android:textAppearance="?attr/textAppearanceBody2"
             android:textColor="?android:attr/textColorSecondary"
-            tools:text="@string/entry_point_description" />
+            tools:text="@string/menu_description" />
 
 
     </LinearLayout>

@@ -3,19 +3,19 @@ package com.github.crazygit.demo.androidgistwithkotlin
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.github.crazygit.demo.androidgistwithkotlin.logic.model.EntryPoint
+import com.github.crazygit.demo.androidgistwithkotlin.logic.model.Menu
 
-class MainViewModel(entryPoint: EntryPoint?) : ViewModel() {
-    val currentEntryPoint: LiveData<EntryPoint?>
-        get() = _currentEntryPoint
-    private var _currentEntryPoint = MutableLiveData<EntryPoint?>()
+class MainViewModel(menu: Menu?) : ViewModel() {
+    val currentMenu: LiveData<Menu?>
+        get() = _currentMenu
+    private var _currentMenu = MutableLiveData<Menu?>()
 
     init {
-        changeCurrentEntryPoint(entryPoint)
+        changeCurrentMenu(menu)
     }
 
-    fun changeCurrentEntryPoint(entryPoint: EntryPoint?) {
-        _currentEntryPoint.value = entryPoint
+    fun changeCurrentMenu(menu: Menu?) {
+        _currentMenu.value = menu
     }
 
 

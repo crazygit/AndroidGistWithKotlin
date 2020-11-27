@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AndroidGistWithKotlin</string>
-    <string name="entry_point_title">EntryPoint Title</string>
-    <string name="entry_point_description">EntryPoint Description</string>
+    <string name="menu_title">Menu Title</string>
+    <string name="menu_description">Menu Description</string>
     <string name="this_is_top_fragment">This is top fragment</string>
     <string name="this_is_bottom_fragment">This is bottom fragment</string>
     <string name="change_bottom_fragment">Change bottom fragment</string>
@@ -25,4 +25,10 @@
     <string name="launch_from_globalscope">Launch from GlobalScope</string>
     <string name="launch_from_mainscope">Launch from MainScope</string>
     <string name="unit_test_get_string">This string is for unit test purpose</string>
+    <string name="music_fragment">Music fragment</string>
+    <string name="music">Music</string>
+    <string name="video">Video</string>
+    <string name="people">People</string>
+    <string name="video_fragment">Video fragment</string>
+    <string name="click_me">Click me</string>
 </resources>
